@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Certificates</title>
+</head>
+<body>
+    <h1>Uploaded Certificates</h1>
+    <ul>
+        {% for cert in certificates %}
+        <li>{{ cert.certificate_file.name }} - Uploaded at {{ cert.uploaded_at }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'generate_resume' %}">Generate Resume</a>
+</body>
+</html>
